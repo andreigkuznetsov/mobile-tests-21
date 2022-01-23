@@ -44,13 +44,13 @@ public class TestBase {
             String sessionId = getSessionId();
             AllureAttachments.attachVideo(sessionId);
 
-                if (ProjectData.deviceHost().equals(DeviceHost.BROWSERSTACK)) {
-                    AllureAttachments.attachAsText(
-                            "Browserstack build link",
-                            BrowserStackHelper.getBrowserstackVideoUrl(sessionId)
-                    );
-                }
+            if (ProjectData.deviceHost().equals(DeviceHost.BROWSERSTACK)) {
+                AllureAttachments.attachAsText(
+                        "Browserstack build link",
+                        BrowserStackHelper.getBrowserstackVideoUrl(sessionId)
+                );
             }
+        }
 
         closeWebDriver();
     }
