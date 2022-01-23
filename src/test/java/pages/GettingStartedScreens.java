@@ -11,13 +11,13 @@ import static io.qameta.allure.Allure.step;
 
 public class GettingStartedScreens {
 
-    private final String FIRST_SCREEN_TEXT = "The Free Encyclopedia …in over 300 languages",
-            SECOND_SCREEN_TEXT = "New ways to explore",
-            THIRD_SCREEN_TEXT = "Reading lists with sync",
-            FOURTH_SCREEN_TEXT = "Send anonymous data";
+    private final String first_screen_text = "The Free Encyclopedia …in over 300 languages",
+            second_screen_text = "New ways to explore",
+            third_screen_text = "Reading lists with sync",
+            fourth_screen_text = "Send anonymous data";
 
-    public final String LANGUAGE = "Russian",
-            DATASENDSTATUS = "Send usage data OFF";
+    public final String language = "Russian",
+            datasendstatus = "Send usage data OFF";
 
     private SelenideElement
             primaryTextView = $(MobileBy.id("org.wikipedia.alpha:id/primaryTextView")),
@@ -29,7 +29,7 @@ public class GettingStartedScreens {
 
     public GettingStartedScreens firstScreenCheck() {
         step("Проверяем, что первый экран содержит контент", () ->
-                primaryTextView.shouldHave(text(FIRST_SCREEN_TEXT)));
+                primaryTextView.shouldHave(text(first_screen_text)));
 
         return this;
     }
@@ -43,21 +43,21 @@ public class GettingStartedScreens {
 
     public GettingStartedScreens secondScreenCheck() {
         step("Проверяем, что второй экран содержит контент", () ->
-                primaryTextView.shouldHave(text(SECOND_SCREEN_TEXT)));
+                primaryTextView.shouldHave(text(second_screen_text)));
 
         return this;
     }
 
     public GettingStartedScreens thirdScreenCheck() {
         step("Проверяем, что третий экран содержит контент", () ->
-                primaryTextView.shouldHave(text(THIRD_SCREEN_TEXT)));
+                primaryTextView.shouldHave(text(third_screen_text)));
 
         return this;
     }
 
     public GettingStartedScreens fourthScreenCheck() {
         step("Проверяем, что четвертый экран содержит контент", () ->
-                primaryTextView.shouldHave(text(FOURTH_SCREEN_TEXT)));
+                primaryTextView.shouldHave(text(fourth_screen_text)));
 
         return this;
     }
