@@ -16,7 +16,7 @@ public class SwitchPrivateDataSendComponent {
         step("Выключаем анонимную передачу пользовательских данных", () ->
                 switchView.click());
 
-        step("Проверяем, что анаонимная передача данных выключена", () ->
+        step("Проверяем, что анонимная передача данных выключена", () ->
                 switchView.shouldHave(text(PrivateDataSend)));
     }
 }
