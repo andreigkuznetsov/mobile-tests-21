@@ -3,12 +3,12 @@ package helpers;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static config.ProjectData.localConfig;
+import static config.ProjectData.realConfig;
 
-public class LocalHelper {
-    public static URL getLocalServerUrl() {
+public class RealHelper {
+    public static URL getRealServerUrl() {
         try {
-            return new URL(localConfig.localServerUrl());
+            return new URL(realConfig.realServerUrl());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

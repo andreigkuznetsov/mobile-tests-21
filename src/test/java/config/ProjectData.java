@@ -7,8 +7,8 @@ public class ProjectData {
             ConfigFactory.create(BrowserStackConfig.class, System.getProperties());
     public static final EmulationConfig emulationConfig =
             ConfigFactory.create(EmulationConfig.class, System.getProperties());
-    public static final LocalConfig localConfig =
-            ConfigFactory.create(LocalConfig.class, System.getProperties());
+    public static final RealConfig realConfig =
+            ConfigFactory.create(RealConfig.class, System.getProperties());
     public static final SelenoidConfig selenoidConfig =
             ConfigFactory.create(SelenoidConfig.class, System.getProperties());
     public static final DeviceHostConfig deviceHostConfig =

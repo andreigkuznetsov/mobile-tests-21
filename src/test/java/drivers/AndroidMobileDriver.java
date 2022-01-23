@@ -4,7 +4,7 @@ import com.codeborne.selenide.WebDriverProvider;
 import config.DeviceHost;
 import helpers.EmulationHelper;
 import helpers.BrowserStackHelper;
-import helpers.LocalHelper;
+import helpers.RealHelper;
 import helpers.SelenoidHelper;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
@@ -28,8 +28,8 @@ public class AndroidMobileDriver implements WebDriverProvider {
             return getEmulationMobileDriver(desiredCapabilities);
         }
 
-        if (deviceHost().equals(DeviceHost.LOCAL)) {
-            return getLocalMobileDriver(desiredCapabilities);
+        if (deviceHost().equals(DeviceHost.REAL)) {
+            return getRealMobileDriver(desiredCapabilities);
         }
 
         return getSelenoidMobileDriver(desiredCapabilities);
@@ -48,17 +48,17 @@ public class AndroidMobileDriver implements WebDriverProvider {
         return new AndroidDriver<>(EmulationHelper.getEmulationServerUrl(), desiredCapabilities);
     }
 
-    public AndroidDriver<WebElement> getLocalMobileDriver(@Nonnull DesiredCapabilities desiredCapabilities) {
-        desiredCapabilities.setCapability("platformName", localConfig.platformName());
-        desiredCapabilities.setCapability("deviceName", localConfig.deviceName());
-        desiredCapabilities.setCapability("version", localConfig.version());
+    public AndroidDriver<WebElement> getRealMobileDriver(@Nonnull DesiredCapabilities desiredCapabilities) {
+        desiredCapabilities.setCapability("platformName", realConfig.platformName());
+        desiredCapabilities.setCapability("deviceName", realConfig.deviceName());
+        desiredCapabilities.setCapability("version", realConfig.version());
         desiredCapabilities.setCapability("locale", "en");
         desiredCapabilities.setCapability("language", "en");
         desiredCapabilities.setCapability("appPackage", "org.wikipedia.alpha");
         desiredCapabilities.setCapability("appActivity", "org.wikipedia.main.MainActivity");
-        desiredCapabilities.setCapability("app", getAbsolutePath(localConfig.appURL()));
+        desiredCapabilities.setCapability("app", getAbsolutePath(realConfig.appURL()));
 
-        return new AndroidDriver<>(LocalHelper.getLocalServerUrl(), desiredCapabilities);
+        return new AndroidDriver<>(RealHelper.getRealServerUrl(), desiredCapabilities);
     }
 
     public AndroidDriver<WebElement> getSelenoidMobileDriver(@Nonnull DesiredCapabilities desiredCapabilities) {

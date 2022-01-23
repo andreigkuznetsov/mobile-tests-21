@@ -4,5 +4,5 @@ public enum DeviceHost {
     BROWSERSTACK,
     EMULATION,
     SELENOID,
-    LOCAL
+    REAL
 }

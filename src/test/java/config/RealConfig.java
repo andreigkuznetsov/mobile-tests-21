@@ -5,11 +5,11 @@ import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "system:properties",
-        "classpath:config/local.properties"
+        "classpath:config/real.properties"
 })
-public interface LocalConfig extends Config {
-    @Config.Key("localServerUrl")
-    String localServerUrl();
+public interface RealConfig extends Config {
+    @Config.Key("realServerUrl")
+    String realServerUrl();
 
     @Config.Key("platformName")
     String platformName();
