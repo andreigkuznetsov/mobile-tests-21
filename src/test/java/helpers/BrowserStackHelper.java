@@ -27,6 +27,7 @@ public class BrowserStackHelper {
                 .response()
                 .path("automation_session.video_url");
 
+        System.out.println("video_url: " + video_url);
         return video_url;
     }
 }

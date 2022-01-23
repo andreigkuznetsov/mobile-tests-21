@@ -44,10 +44,6 @@ public class TestBase {
             String sessionId = getSessionId();
             AllureAttachments.attachVideo(sessionId);
 
-            if (!ProjectData.deviceHost().equals(DeviceHost.LOCAL)) {
-                String sessionsId = getSessionId();
-                AllureAttachments.attachVideo(sessionsId);
-
                 if (ProjectData.deviceHost().equals(DeviceHost.BROWSERSTACK)) {
                     AllureAttachments.attachAsText(
                             "Browserstack build link",
@@ -55,7 +51,6 @@ public class TestBase {
                     );
                 }
             }
-        }
 
         closeWebDriver();
     }
