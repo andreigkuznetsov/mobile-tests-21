@@ -16,9 +16,6 @@ public class GettingStartedScreens {
             third_screen_text = "Reading lists with sync",
             fourth_screen_text = "Send anonymous data";
 
-    public final String language = "Russian",
-            datasendstatus = "Send usage data OFF";
-
     private SelenideElement
             primaryTextView = $(MobileBy.id("org.wikipedia.alpha:id/primaryTextView")),
             stepForward = $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")),

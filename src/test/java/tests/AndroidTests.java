@@ -8,7 +8,7 @@ public class AndroidTests extends TestBase {
 
         GettingStartedScreens.firstScreenCheck();
 
-        GettingStartedScreens.addLanguage.setRuLang(GettingStartedScreens.language);
+        GettingStartedScreens.addLanguage.setRuLang(TestData.LANGUAGE);
 
         GettingStartedScreens.openNextScreen()
                         .secondScreenCheck()
@@ -16,7 +16,7 @@ public class AndroidTests extends TestBase {
                         .thirdScreenCheck()
                         .openNextScreen()
                         .fourthScreenCheck();
-        GettingStartedScreens.SwitchPrivateDataSend.switchPrivateDataSend(GettingStartedScreens.datasendstatus);
+        GettingStartedScreens.SwitchPrivateDataSend.switchPrivateDataSend(TestData.DATASENDSTATUS);
 
     }
 
