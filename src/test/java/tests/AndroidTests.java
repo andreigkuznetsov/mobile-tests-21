@@ -13,11 +13,11 @@ public class AndroidTests extends TestBase {
         GettingStartedScreens.addLanguage.setRuLang(TestData.LANGUAGE);
 
         GettingStartedScreens.openNextScreen()
-                        .secondScreenCheck()
-                        .openNextScreen()
-                        .thirdScreenCheck()
-                        .openNextScreen()
-                        .fourthScreenCheck();
+                .secondScreenCheck()
+                .openNextScreen()
+                .thirdScreenCheck()
+                .openNextScreen()
+                .fourthScreenCheck();
         GettingStartedScreens.SwitchPrivateDataSend.switchPrivateDataSend(TestData.DATASENDSTATUS);
 
     }
