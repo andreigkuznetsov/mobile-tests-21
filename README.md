@@ -66,7 +66,7 @@ clean test -DdeviceHost=real
 
 ### Добавлена интеграция с Jira, где можно посмотреть запускаемые кейсы и их результаты.
 
-##### Перейти в Jira можно [по ссылке](https://jira.autotests.cloud/browse/HOMEWORK-312)
+##### Перейти в задачу Jira можно [по ссылке](https://jira.autotests.cloud/browse/HOMEWORK-312)
 
 ![Jira](img/Jira_mt.png)
 
