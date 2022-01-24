@@ -12,27 +12,28 @@
 
 Java, Gradle, JUnit5, Selenide, Jenkins, Selenoid, Allure Reports, TestOps, Appium, Browserstack, RestAssured, Telegram (уведомления), Jira
 
-## Запуск тестов с заполненными конфигурационными файлами *.properties:
+## Запуск тестов с заполненными конфигурационными файлами *.properties 
+### (ниже показаны команды для запуска в Jenkins, для локального запуска в начало команды добавляем gradle):
 
 ### Для запуска тестов в BrowserStack:
 
 ```bash
-gradle clean test -DdeviceHost=browserstack
+clean test -DdeviceHost=browserstack
 ```
 ### Для запуска тестов в Selenoid:
 
 ```bash
-gradle clean test -DdeviceHost=selenoid
+clean test -DdeviceHost=selenoid
 ```
 ### Для запуска тестов в эмуляторе + Appium:
 
 ```bash
-gradle clean test -DdeviceHost=emulation
+clean test -DdeviceHost=emulation
 ``` 
 ### Для запуска тестов на реальном устройстве + Appium:
 
 ```bash
-gradle clean test -DdeviceHost=real
+clean test -DdeviceHost=real
 ``` 
 
 ### Для запусков автотестов используется Jenkins.
